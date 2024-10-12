@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import modelo.EmpleadoDAO;
 import modelo.Sincronizador;
+import vista.FrmModificarM;
+import vista.FrmModificarP;
 import vista.FrmMostrar;
 import vista.FrmMostrarPos;
 import vista.Frm_Insertar;
@@ -27,16 +29,22 @@ public class ControladorMenu implements ActionListener {
     FrmMostrarPos vMop = new FrmMostrarPos();
     EmpleadoDAO em = new EmpleadoDAO();
     Sincronizador sin = new Sincronizador();
+    FrmModificarM mmo = new FrmModificarM();
+    FrmModificarP mmop = new FrmModificarP();
 
-    public ControladorMenu(Frm_Menu vMe, FrmMostrar vMo,FrmMostrarPos vMop,Frm_Insertar vIn) {
+    public ControladorMenu(Frm_Menu vMe, FrmMostrar vMo,FrmMostrarPos vMop,Frm_Insertar vIn,FrmModificarM mmo, FrmModificarP mmop) {
         this.vMe = vMe;
         this.vMo = vMo;
         this.vMop = vMop;
         this.vIn = vIn;
+        this.mmo = mmo;
+        this.mmop = mmop;
 
         vMe.btnMysql.addActionListener(this);
         vMe.btnInsertarM.addActionListener(this);
         vMe.btnPostgres.addActionListener(this);
+        vMe.btnMysql1.addActionListener(this);
+        vMe.btnPostgres1.addActionListener(this);
         vMe.btnSincronizar.addActionListener(this);
     }
 
@@ -49,6 +57,14 @@ public class ControladorMenu implements ActionListener {
         if (e.getSource() == vMe.btnPostgres) {
             vMop.setVisible(true);
             vMop.setLocationRelativeTo(null);
+        }
+        if (e.getSource() == vMe.btnMysql1) {
+            mmo.setVisible(true);
+            mmo.setLocationRelativeTo(null);
+        }
+        if (e.getSource() == vMe.btnPostgres1) {
+            mmop.setVisible(true);
+            mmop.setLocationRelativeTo(null);
         }
         if (e.getSource() == vMe.btnSincronizar) {
            sin.sincronizarBasesDeDatos();

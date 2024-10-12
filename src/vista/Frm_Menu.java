@@ -32,6 +32,8 @@ public class Frm_Menu extends javax.swing.JFrame {
         btnPostgres = new javax.swing.JButton();
         btnSincronizar = new javax.swing.JButton();
         btnInsertarM = new javax.swing.JButton();
+        btnMysql1 = new javax.swing.JButton();
+        btnPostgres1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,14 +68,24 @@ public class Frm_Menu extends javax.swing.JFrame {
             }
         });
 
+        btnMysql1.setText("ModificarMySQL");
+        btnMysql1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMysql1ActionPerformed(evt);
+            }
+        });
+
+        btnPostgres1.setText("ModificarPostgres");
+        btnPostgres1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPostgres1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addComponent(btnSincronizar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -86,10 +98,21 @@ public class Frm_Menu extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(133, 133, 133)
+                .addComponent(btnSincronizar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnInsertarM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(33, 33, 33))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnInsertarM, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(33, 33, 33))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnMysql1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnPostgres1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,9 +125,13 @@ public class Frm_Menu extends javax.swing.JFrame {
                     .addComponent(btnPostgres))
                 .addGap(18, 18, 18)
                 .addComponent(btnSincronizar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMysql1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPostgres1))
+                .addGap(18, 18, 18)
                 .addComponent(btnInsertarM, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+                .addContainerGap())
         );
 
         pack();
@@ -125,6 +152,14 @@ public class Frm_Menu extends javax.swing.JFrame {
     private void btnInsertarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnInsertarMActionPerformed
+
+    private void btnMysql1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMysql1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMysql1ActionPerformed
+
+    private void btnPostgres1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostgres1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPostgres1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,7 +202,9 @@ public class Frm_Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnInsertarM;
     public javax.swing.JButton btnMysql;
+    public javax.swing.JButton btnMysql1;
     public javax.swing.JButton btnPostgres;
+    public javax.swing.JButton btnPostgres1;
     public javax.swing.JButton btnSincronizar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

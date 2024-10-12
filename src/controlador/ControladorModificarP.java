@@ -14,21 +14,22 @@ import javax.swing.table.DefaultTableModel;
 import vista.FrmMostrar;
 import modelo.Empleado;
 import modelo.EmpleadoDAO;
+import vista.FrmModificarP;
 import vista.Frm_Actualizar;
 
 /**
  *
  * @author John
  */
-public class ControladorMostrar implements WindowListener,MouseListener {
+public class ControladorModificarP implements WindowListener,MouseListener {
 
-    FrmMostrar vista = new FrmMostrar();
+    FrmModificarP vista = new FrmModificarP();
     
     Empleado pvo = new Empleado();
     EmpleadoDAO pdao = new EmpleadoDAO();
     Frm_Actualizar ac = new Frm_Actualizar();
     
-    public ControladorMostrar(FrmMostrar vista, Empleado pvo, EmpleadoDAO pdao,  Frm_Actualizar ac) {
+    public ControladorModificarP(FrmModificarP vista, Empleado pvo, EmpleadoDAO pdao,  Frm_Actualizar ac) {
         this.vista = vista;
         this.pvo = pvo;
         this.pdao = pdao;
@@ -58,21 +59,6 @@ public class ControladorMostrar implements WindowListener,MouseListener {
         vista.tblMostrar.setModel(m);
     }
     
-        private void eliminar() {
-
-        int row = vista.tblMostrar.getSelectedRow();
-        pvo.setDpi(vista.tblMostrar.getValueAt(row, 0).toString());
-        int men = JOptionPane.showConfirmDialog(null, "Estas seguro que deceas eliminar el registro?", "pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-
-        if (men == JOptionPane.YES_OPTION) {
-            try {
-                pdao.eliminar(pvo);
-                pvo.setDpi(String.valueOf(row));
-            } catch (Exception e) {
-                System.out.println("Mensaje eliminar" + e.getMessage());
-            }
-        }
-    }
 
     private void datos() {
         int row;
@@ -123,7 +109,9 @@ public class ControladorMostrar implements WindowListener,MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        eliminar();
+        datos();
+        ac.setVisible(true); // Muestra el formulario de actualización
+        ac.setLocationRelativeTo(null); // Centra el formulario en pantalla
     }
 
     @Override

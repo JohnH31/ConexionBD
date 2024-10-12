@@ -15,3 +15,10 @@ Acción: Actualizar, Base de Datos: MySQL, DPI: 2234567890123
 Acción: Actualizar, Base de Datos: MySQL, DPI: 5234567890123
 Acción: Eliminar, Base de Datos: MySQL, DPI: 99999991
 Acción: Eliminar, Base de Datos: PostgreSQL, DPI: 6262
+Acción: Eliminar, Base de Datos: MySQL, DPI: 58745896
+Acción: Eliminar, Base de Datos: MySQL, DPI: 626245
+Acción: Actualizar, Base de Datos: PostgreSQL, DPI: 2227211380101
+Acción: Eliminar, Base de Datos: PostgreSQL, DPI: 2234567890123
+Acción: Insertar, Base de Datos: PostgreSQL, DPI: 1234567891501
+Acción: Actualizar, Base de Datos: MySQL, DPI: 2227211380101
+Acción: Actualizar, Base de Datos: PostgreSQL, DPI: 1234567891501
